@@ -14,9 +14,7 @@ public class Main {
 
     public static void main(String[] args) {
         createStudents();
-        System.out.println("/r - Выбор случайного студента");
-        System.out.println("/l - Вывод списка студентов");
-        System.out.println("/end - Завершить программу");
+        System.out.println("/r - Выбор случайного студента \n/l - Вывод списка студентов \n/end - Завершить программу" );
         System.out.print(">");
         String input = scanner.next();
         while (true) {
