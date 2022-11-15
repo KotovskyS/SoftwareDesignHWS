@@ -31,13 +31,13 @@ public class Main {
                         studentList.get(rndStudent).setMark(grade);
                     } else if (answer.equals("нет")) {
                         studentList.get(rndStudent).setAbsence(true);
-                        System.out.println("Студент " + studentList.get(rndStudent).getSurname() + " is absent!");
+                        System.out.println("Студент " + studentList.get(rndStudent).getSurname() + " отсутствует!");
                         studentList.get(rndStudent).setMark(0);
                     } else {
                         System.out.println("Некорректный ввод!");
                     }
                 } else {
-                    System.out.println("Студент " + studentList.get(rndStudent).getSurname() + " already answered!");
+                    System.out.println("Студента " + studentList.get(rndStudent).getSurname() + " уже спрашивали!");
                     System.out.println("Выбор случайного студена: /r.");
                 }
             }
