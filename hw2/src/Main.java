@@ -6,14 +6,10 @@ public class Main {
 
     protected static ArrayList<Student> studentList = new ArrayList<>();
 
-    public static void createStudents() {
+    public static void main(String[] args) {
         for (int i = 0; i < random.nextInt(20) + 5; i++) {
             studentList.add(new Student("Иван " + i, "Иванович " + i, 0, true));
         }
-    }
-
-    public static void main(String[] args) {
-        createStudents();
         System.out.println("/r - Выбор случайного студента \n/l - Вывод списка студентов \n/end - Завершить программу" );
         System.out.print(">");
         String input = scanner.next();
@@ -21,7 +17,7 @@ public class Main {
             if (Objects.equals(input, "/r")){
                 int rndStudent = random.nextInt(studentList.size());
                 if (studentList.get(rndStudent).getMark() == 0) {
-                    System.out.println("Student " + studentList.get(rndStudent).getSurname() + " is answering:");
+                    System.out.println("Студент " + studentList.get(rndStudent).getSurname() + " отвечает:");
                     System.out.println("Студент присутствует? да/нет");
                     String answer = scanner.next();
                     if (answer.equals("да")) {
