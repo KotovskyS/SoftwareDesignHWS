@@ -15,7 +15,7 @@ public class Main {
         String command = scanner.next();
         while (true) {
             switch (command){
-                case "/r":
+                case "/r" -> {
                     int rndStudent = random.nextInt(studentList.size());
                     if (studentList.get(rndStudent).getMark() == 0) {
                         System.out.println("Студент " + studentList.get(rndStudent).getSurname() + " отвечает:");
@@ -37,17 +37,21 @@ public class Main {
                         System.out.println("Студента " + studentList.get(rndStudent).getSurname() + " уже спрашивали!");
                         System.out.println("Выбор случайного студена: /r.");
                     }
-                    break;
-                case "/l":
+                }
+
+                case "/l" -> {
                     for (Student student : studentList) {
                         System.out.println(student);
                     }
-                    break;
-                case "end":
+                }
+
+                case "end" -> {
                     return;
-                default:
+                }
+
+                default -> {
                     System.out.print("Некорректный ввод!\n");
-                    break;
+                }
             }
             System.out.print(">");
             command = scanner.next();
